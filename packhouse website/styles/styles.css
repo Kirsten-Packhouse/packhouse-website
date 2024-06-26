@@ -2,12 +2,13 @@
     padding:0 ; 
     margin:0; 
     box-sizing: border-box;
-
+    
 }
 /* responsive column grid */
 [class*="col-"] {
   width: 100%;
 }
+
 @media only screen and (min-width: 768px) {  
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -25,6 +26,11 @@
 [class*="col-"] {
   float: left;
   padding: 0; 
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 /* Font styles */
@@ -58,54 +64,83 @@
     --ph-c-neutral-grey: #A5A5A6;
     --pg-c-neutral-dark:  #0E171A; 
 
-    --ph-gradient-primairy-1: linear-gradient(#273E47, #4C798A, #82AABA ); 
+    --ph-gradient-primairy-1: linear-gradient(#273E47, #4C798A, #82AABA 95%); 
 
     font-size: 16px;
     background-color: var(--ph-c-white-1);
+}
 
-    /* fontstyles */
 
+    /* buttons */
+.primairy-button { 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 0.875rem 1.75rem 0.875rem 1.75rem;
+  line-height: 1.25rem; 
+  border-radius: 0.625rem;
+  border-style: none;
+  background-image: var(--ph-gradient-primairy-1); 
+  color: var(--ph-c-white-1);
   
 
 }
-body { 
-  
-}
+
+
+
 
 h1 { 
   font-family: "Jost"; 
   font-weight: 700;
   line-height: 4.7rem;
-  size:4.3rem;
+  font-size:4.3rem;
+  
   color: var(--ph-c-primairy-1); 
 
 }
 
 h2 { 
   font-family: "Montserrat";
-  font-weight: 600;
+  font-weight: 500;
   line-height: 3.62rem;
-  size:2.5rem; 
+  font-size:2rem; 
   color: var(--ph-c-primairy-1);
+  font-style: italic;
+
   
 }
 
 
 /* Navigation */
+@media only screen and (max-width: 600px){ 
+  nav { 
+    display:none; 
+  }
+}
 
+header .row:first-of-type { 
+  height: 20vh; 
+  width: 100%;
+} 
 nav { 
-  width: 100vw;
  display: flex;
+ justify-content: end;
+}
+nav>.col-9 { 
+  float: left; 
+}
+ /* logo */
+.beeldmerk-horizontaal-kleur { 
+  max-width: 100%;
+  height: auto; 
+  margin-left: 5rem;
   
 
 }
 
-
-
 ul { 
   display: flex; 
   justify-items: flex-end;
-  height: fit-content;
   float: right;
   margin-right: 5rem; 
   
