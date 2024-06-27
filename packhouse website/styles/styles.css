@@ -3,60 +3,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-/* responsive column grid */
-[class*="col-"] {
-  width: 100%;
-}
-
-@media only screen and (min-width: 768px) {
-  .col-1 {
-    width: 8.33%;
-  }
-  .col-2 {
-    width: 16.66%;
-  }
-  .col-3 {
-    width: 25%;
-  }
-  .col-4 {
-    width: 33.33%;
-  }
-  .col-5 {
-    width: 41.66%;
-  }
-  .col-6 {
-    width: 50%;
-  }
-  .col-7 {
-    width: 58.33%;
-  }
-  .col-8 {
-    width: 66.66%;
-  }
-  .col-9 {
-    width: 75%;
-  }
-  .col-10 {
-    width: 83.33%;
-  }
-  .col-11 {
-    width: 91.66%;
-  }
-  .col-12 {
-    width: 100%;
-  }
-}
-
-[class*="col-"] {
-  float: left;
-  padding: 15px;
-}
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 /* Font styles */
 @font-face {
   font-family: "Jost";
@@ -90,37 +36,74 @@
 
   --ph-gradient-primairy-1: linear-gradient(#273e47, #4c798a, #82aaba 95%);
 
-  
   background-color: var(--ph-c-white-1);
 }
 
-/* font sizing media queries */
-@media only screens and (max-width: 600px){ 
-  :root { 
-    font-size: 10px; 
+@media only screens and (min-width: 600px) {
+  :root {
+    font-size: 8px;
   }
 }
-@media only screens and (min-width: 600px){ 
+@media only screens and (max-width: 768px) {
+  [class*="col-"] {
+    width: 100%;
+  }
   :root { 
-    font-size: 12px; 
+    font-size: 10px;
   }
 }
-@media only screens and (min-width: 768px){ 
-  :root { 
-    font-size: 14px; 
+@media only screens and (min-width: 768px) {
+  :root {
+    font-size: 16px;
   }
 }
-@media only screens and (min-width: 992px){ 
-  :root { 
-    font-size: 16px; 
-  }
+.col-1 {
+  width: 8.33%;
 }
-@media only screens and (min-width: 1200px){ 
-  :root { 
-    font-size: 18px; 
-  }
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
 }
 
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+ 
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 /* buttons */
 .button {
@@ -133,15 +116,13 @@
   border-style: none;
   background-image: var(--ph-gradient-primairy-1);
   color: var(--ph-c-white-1);
-  margin: 0.25rem; 
+  margin: 0.25rem;
 }
-.secundairy { 
- border:2px  solid var(--ph-c-primairy-1);
- color: var(--ph-c-primairy-1); 
- 
- background-image: none;
- 
+.secundairy {
+  border: 2px solid var(--ph-c-primairy-1);
+  color: var(--ph-c-primairy-1);
 
+  background-image: none;
 }
 
 h1 {
@@ -149,23 +130,33 @@ h1 {
   font-weight: 700;
   line-height: 4.7rem;
   font-size: 4rem;
-  padding: 0.25rem; 
+  padding: 0.25rem;
   color: var(--ph-c-primairy-1);
-  margin: 1.75rem 1.75rem 0.25rem 1.75rem; 
+  margin: 1.75rem 1.75rem 0.25rem 1.75rem;
   letter-spacing: 0.375rem;
 }
 
 h2 {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   line-height: 2.5rem;
   letter-spacing: 0.375rem;
   font-size: 1.75rem;
   color: var(--ph-c-primairy-1);
   font-style: italic;
-  padding: 0.25rem; 
+  padding: 0.25rem;
   margin: 0 1.75rem 1.75rem 1.75rem;
 }
+
+h3 { 
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--ph-c-white-1);
+  line-height: 2.5rem;
+
+}
+
 /* HEADER */
 
 header .row:first-of-type {
@@ -175,31 +166,23 @@ header .row:first-of-type {
 }
 
 /* Navigation */
-@media only screen and (max-width: 900px) {
-  ul { 
-    display: none;
-  }
-} 
-
 nav {
   display: flex;
   justify-content: end;
 }
-nav > .col-9 {
-  float: left;
-}
+
 /* logo */
 .beeldmerk-horizontaal-kleur {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  margin-left: 5rem;
+  padding-left: 5rem;
   padding-top: 2.5rem;
 }
 
 ul {
   display: flex;
   justify-items: flex-end;
-  margin-right: 5rem;
+  padding-right: 5rem;
 }
 
 li {
@@ -215,4 +198,22 @@ a {
   color: var(--ph-c-primairy-1);
   line-height: 1.75rem;
 }
+.container-buttons { 
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem; 
+}
 
+/* Our Services */
+
+.ourService{ 
+  background-image: url(./images/skylinehoorn.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; 
+
+}
+
+.col-12>.ourService { 
+  padding: 0; 
+}
