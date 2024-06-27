@@ -34,7 +34,7 @@
   --ph-c-neutral-grey: #a5a5a6;
   --ph-c-neutral-dark: #0e171a;
 
-  --ph-gradient-primairy-1: linear-gradient(#273e47, #4c798a, #82aaba 95%);
+  --ph-gradient-primairy-1: linear-gradient(to right, #273e47 55%, #4c798a, #82aaba );
 
   background-color: var(--ph-c-white-1);
 }
@@ -108,7 +108,7 @@
 /* buttons */
 .button {
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.875rem;
   padding: 0.875rem 1.75rem 0.875rem 1.75rem;
   line-height: 1.25rem;
@@ -121,10 +121,49 @@
 .secundairy {
   border: 2px solid var(--ph-c-primairy-1);
   color: var(--ph-c-primairy-1);
-
   background-image: none;
+  background-color: var(--ph-c-white-1);
 }
 
+/* DESIGN ELEMENTEN */
+
+.element1 { 
+  width: 75px;
+  height: 75px;
+  left: 12rem;
+  top: 15rem; 
+  border-radius: 50px;
+  background-color: var(--ph-c-accent-1);
+  opacity: 50%;
+  position: absolute; 
+}
+
+.element2 { 
+  --s: 270deg;  /* starting angle */
+  --p: 270deg; /* filling angle */
+
+  height: 75px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--ph-c-secundairy-1);
+  opacity: 55%;
+  mask: conic-gradient(from var(--s),#0000,#000 1deg var(--p),#0000 calc(var(--p) + 1deg));
+  position: absolute;
+  left: 68%; 
+}
+.element3 { 
+  height: 350px;
+  width: 350px;
+  border-radius: 175px;
+  border: dotted 1px var(--ph-c-accent-1);
+  position: absolute;
+  left: 47%;
+  top: 39%; 
+  z-index: -1;
+
+}
+
+/* FONTSTYLES */
 h1 {
   font-family: "Jost";
   font-weight: 700;
@@ -138,7 +177,7 @@ h1 {
 
 h2 {
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 2.5rem;
   letter-spacing: 0.375rem;
   font-size: 1.75rem;
@@ -155,6 +194,7 @@ h3 {
   color: var(--ph-c-white-1);
   line-height: 2.5rem;
 
+
 }
 
 /* HEADER */
@@ -164,7 +204,14 @@ header .row:first-of-type {
   width: 100%;
   align-content: center;
 }
-
+header { 
+  height: 80vh; 
+}
+main .row:first-of-type { 
+  width: 100%;
+  position: local;
+  bottom: -80%; 
+}
 /* Navigation */
 nav {
   display: flex;
@@ -188,7 +235,7 @@ ul {
 li {
   list-style: none;
   align-content: center;
-  padding: 2.5rem 1.25rem 2.5rem 1.25rem;
+  padding: 2.5rem 0 2.5rem 1.25rem;
 }
 a {
   text-decoration: none;
@@ -201,19 +248,20 @@ a {
 .container-buttons { 
   display: flex;
   gap: 1rem;
-  padding: 1.25rem; 
+  padding: 1rem; 
 }
 
 /* Our Services */
 
 .ourService{ 
-  background-image: url(./images/skylinehoorn.svg);
+  background-image: url(./images/background-Image-Hoorn.svg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh; 
+  width: 100%;
 
 }
 
-.col-12>.ourService { 
+.row>.col-12 { 
   padding: 0; 
 }
