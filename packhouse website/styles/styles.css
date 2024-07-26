@@ -41,18 +41,18 @@
 
 @media only screens and (min-width: 600px) {
   :root {
-    font-size: 8px;
+    font-size: 6px;
   }
 }
-@media only screens and (max-width: 768px) {
+@media only screens and (max-width: 900px) {
   [class*="col-"] {
     width: 100%;
   }
   :root { 
-    font-size: 10px;
+    font-size: 8px;
   }
 }
-@media only screens and (min-width: 768px) {
+@media only screens and (min-width: 900px) {
   :root {
     font-size: 16px;
   }
@@ -97,6 +97,7 @@
 [class*="col-"] {
   float: left;
   padding: 15px;
+  border: 1px solid red; 
  
 }
 .row::after {
@@ -196,6 +197,14 @@ h3 {
 
 
 }
+p { 
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400; 
+  font-size: 1rem; 
+  color: var(--ph-c-primairy-1);
+  line-height: 2rem;
+
+}
 
 /* HEADER */
 
@@ -207,6 +216,7 @@ header .row:first-of-type {
 header { 
   height: 80vh; 
 }
+
 main .row:first-of-type { 
   width: 100%;
   position: local;
@@ -251,17 +261,81 @@ a {
   padding: 1rem; 
 }
 
+
 /* Our Services */
 
 .ourService{ 
   background-image: url(./images/background-Image-Hoorn.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh; 
+  height: 130vh; 
   width: 100%;
+  position: relative;
 
+}
+.ourService h3 { 
+position: absolute; 
+top: 30%; 
+left: 50%; 
+transform: translate(-50%,-50%);
 }
 
 .row>.col-12 { 
   padding: 0; 
+}
+.serviceElements { 
+  display: flex; 
+  position: absolute; 
+  top: 60%; 
+  left:50%; 
+  transform: translate(-50%,-50%); 
+  gap: 3rem; 
+  
+}
+figure { 
+  background-color: var(--ph-c-white-1);
+  width: 23vw; 
+  padding-top: 2rem;
+  padding-left: 4rem; 
+  padding-bottom: 5rem; 
+  padding-right: 4rem;  
+  border-radius:1rem ;
+  justify-items: center;
+  
+}
+figure img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: contain;
+}
+figcaption { 
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  letter-spacing: 7%;
+  text-align: center;
+  
+}
+
+
+.tekstContainer { 
+  padding: 2rem; 
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; 
+}
+
+aside h3 { 
+  color: var(--ph-c-primairy-1);
+  size: 3.5rem; 
+  line-height: 3rem; 
+  width: 80%;
+}
+aside button { 
+  width: 30%; 
+}
+
+.gridContainer { 
+  grid-template-columns: repeat(10, 1fr [col-start]);
 }
