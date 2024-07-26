@@ -32,6 +32,7 @@
 
   --ph-c-white-1: #f3f3f4;
   --ph-c-neutral-grey: #a5a5a6;
+  --ph-c-neutral-light-grey: #c2c2c7; 
   --ph-c-neutral-dark: #0e171a;
 
   --ph-gradient-primairy-1: linear-gradient(to right, #273e47 55%, #4c798a, #82aaba );
@@ -97,7 +98,6 @@
 [class*="col-"] {
   float: left;
   padding: 15px;
-  border: 1px solid red; 
  
 }
 .row::after {
@@ -335,7 +335,144 @@ aside h3 {
 aside button { 
   width: 30%; 
 }
+/* Grid container */
+.gridContainer{ 
+  display: grid; 
+  grid-template-columns: repeat(8, 1fr);  
+  grid-template-rows: repeat(24, 1fr);
+  grid-gap: 1rem; 
+  width: 100vw;
+  height: 100vh;
+  padding: 3.625rem;
+}
 
-.gridContainer { 
-  grid-template-columns: repeat(10, 1fr [col-start]);
+/* GRID items */
+/* titel */
+.item.a{ 
+  grid-column-start: 4; 
+  grid-row-start: 1; 
+  grid-column-end: 6; 
+  place-self: center; 
+}
+.a h3 { 
+  color: var(--ph-c-primairy-1);
+  size: 3.5rem; 
+  line-height: 3rem; 
+
+}
+/* spytraining afbeelding */
+.item.b {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 9;
+
+}
+.b img { 
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+  object-position: 90% 0%;
+}
+.item.c { 
+  grid-column-start: 2; 
+  grid-column-end: 4; 
+  grid-row-start: 9; 
+  grid-row-end: 16; 
+}
+.c img { 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0% 90%;
+  
+   
+}
+/* agent8008 afbeelding */
+.item.d { 
+  grid-column-start: 4; 
+  grid-column-end: 6; 
+  grid-row-start: 2; 
+  grid-row-end: 13; 
+}
+.d img { 
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+/* portaal afbeelding  */
+.item.e { 
+  grid-column-start: 4; 
+  grid-column-end: 6; 
+  grid-row-start:13; 
+  grid-row-end: 25; 
+}
+.e img { 
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+/* JBAS afbeelding */
+.item.f { 
+  grid-column-start: 6; 
+  grid-column-end: 8; 
+  grid-row-start:2; 
+  grid-row-end: 14; 
+  align-self: start;
+}
+.f img { 
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* AT Infographic afbeelding */
+.item.g { 
+  grid-column-start: 2; 
+  grid-column-end: 3; 
+  grid-row-start:16; 
+  grid-row-end: 25; 
+  
+}
+.g img { 
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+/* Samgung afbeelding  */
+.item.h { 
+  grid-column-start: 3; 
+  grid-column-end: 4; 
+  grid-row-start: 16; 
+  grid-row-end: 25; 
+  
+}
+.h img { 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* design elementen */
+.item.i { 
+  background-color: var(--ph-c-primairy-1); 
+  grid-column-start: 6; 
+  grid-column-end: 7; 
+  grid-row-start:16; 
+  grid-row-end: 22; 
+  width: 100%;
+  height: 100%;
+  border-radius: 0 50px 0 50px; 
+}
+.item.j { 
+  background-color: var(--ph-c-secundairy-1); 
+  grid-column-start: 7; 
+  grid-column-end: 8; 
+  grid-row-start:16; 
+  grid-row-end: 22; 
+  width: 100%;
+  height: 100%;
+  border-radius: 50px 0 50px 0; 
 }
