@@ -509,16 +509,60 @@ aside button {
 
 .socialCard { 
   background-color: var(--ph-c-white-1);
-  width: 40vw;
+  width: 35vw;
   border-radius: 2.875rem ;
-  padding: 1rem 1rem 1rem 1rem; 
+  padding: 2rem 2rem 2rem 2rem; 
   position: relative;
   left: 40vw; 
   top: 20vh; 
+  box-shadow: 0px 6.14px 36.85px 0px #00000040;
+
   
 }
-.socialCard img { 
-  width:50%;
+.socialCard h4 { 
+  width: 100%;
+  color: var(--ph-c-secundairy-1); 
+  font-size: 6rem; 
+  font-family: "Montserrat", sans-serif;
+  text-align: center; 
+  font-weight: 700;
+}
+.socialCard cite { 
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 1.875rem; 
+  width: 100%;
+  text-align: center;
   height: auto;
+  color:var(--ph-c-primairy-1)
+}
+.naamKlant { 
+  width:100%;
+  height: auto;
+  padding-top: 3rem; 
+  display: flex;
+  align-items: center;
+  position: relative;
 
+}
+.designElementCard { 
+  background-color: var(--ph-c-primairy-1);
+  height: 60%; 
+  width: 20%;
+  top: 2rem; 
+  left: 0; 
+  position: absolute;
+  border-radius: 0 1em 0 1rem;
+  z-index: 0; 
+}
+.naamKlant img { 
+  width: 25%;
+  z-index: 1;
+  margin-left: 1rem; 
+}
+.naamKlant p { 
+  padding: 1rem; 
+  font-size: 1.125rem;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
 }
