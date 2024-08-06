@@ -32,10 +32,15 @@
 
   --ph-c-white-1: #f3f3f4;
   --ph-c-neutral-grey: #a5a5a6;
-  --ph-c-neutral-light-grey: #c2c2c7; 
+  --ph-c-neutral-light-grey: #c2c2c7;
   --ph-c-neutral-dark: #0e171a;
 
-  --ph-gradient-primairy-1: linear-gradient(to right, #273e47 55%, #4c798a, #82aaba );
+  --ph-gradient-primairy-1: linear-gradient(
+    to right,
+    #273e47 55%,
+    #4c798a,
+    #82aaba
+  );
 
   /* background-color: var(--ph-c-white-1); */
 }
@@ -49,7 +54,7 @@
   [class*="col-"] {
     width: 100%;
   }
-  :root { 
+  :root {
     font-size: 8px;
   }
 }
@@ -98,7 +103,6 @@
 [class*="col-"] {
   float: left;
   padding: 15px;
- 
 }
 .row::after {
   content: "";
@@ -128,40 +132,43 @@
 
 /* DESIGN ELEMENTEN */
 
-.element1 { 
+.element1 {
   width: 75px;
   height: 75px;
   left: 12rem;
-  top: 15rem; 
+  top: 15rem;
   border-radius: 50px;
   background-color: var(--ph-c-accent-1);
   opacity: 50%;
-  position: absolute; 
+  position: absolute;
 }
 
-.element2 { 
-  --s: 270deg;  /* starting angle */
+.element2 {
+  --s: 270deg; /* starting angle */
   --p: 270deg; /* filling angle */
 
   height: 75px;
-  aspect-ratio: 1;
   border-radius: 50%;
   background: var(--ph-c-secundairy-1);
   opacity: 55%;
-  mask: conic-gradient(from var(--s),#0000,#000 1deg var(--p),#0000 calc(var(--p) + 1deg));
+  mask: conic-gradient(
+    from var(--s),
+    #0000,
+    #000 1deg var(--p),
+    #0000 calc(var(--p) + 1deg)
+  );
   position: absolute;
-  left: 68%; 
+  left: 68%;
 }
-.element3 { 
+.element3 {
   height: 350px;
   width: 350px;
   border-radius: 175px;
   border: dotted 1px var(--ph-c-accent-1);
   position: absolute;
   left: 47%;
-  top: 39%; 
+  top: 39%;
   z-index: -1;
-
 }
 
 /* FONTSTYLES */
@@ -188,22 +195,19 @@ h2 {
   margin: 0 1.75rem 1.75rem 1.75rem;
 }
 
-h3 { 
+h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1.75rem;
   color: var(--ph-c-primairy-1);
   line-height: 2.5rem;
-
-
 }
-p { 
+p {
   font-family: "Montserrat", sans-serif;
-  font-weight: 400; 
-  font-size: 1rem; 
+  font-weight: 400;
+  font-size: 1rem;
   color: var(--ph-c-primairy-1);
   line-height: 2rem;
-
 }
 
 /* HEADER */
@@ -213,14 +217,13 @@ header .row:first-of-type {
   width: 100%;
   align-content: center;
 }
-header { 
-  height: 80vh; 
+header {
+  height: 80vh;
 }
 
-main .row:first-of-type { 
+main .row:first-of-type {
   width: 100%;
-  position: local;
-  bottom: -80%; 
+  bottom: -80%;
 }
 /* Navigation */
 nav {
@@ -255,116 +258,109 @@ a {
   color: var(--ph-c-primairy-1);
   line-height: 1.75rem;
 }
-.container-buttons { 
+.container-buttons {
   display: flex;
   gap: 1rem;
-  padding: 1rem; 
+  padding: 1rem;
 }
-
 
 /* Our Services */
 
-.ourService{ 
+.ourService {
   background-image: url(./images/background-Image-Hoorn.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 130vh; 
+  height: 130vh;
   width: 100%;
   position: relative;
+}
+.ourService h3 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--ph-c-white-1);
+}
 
+.row > .col-12 {
+  padding: 0;
 }
-.ourService h3 { 
-position: absolute; 
-top: 30%; 
-left: 50%; 
-transform: translate(-50%,-50%);
-color: var(--ph-c-white-1)
+.serviceElements {
+  display: flex;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 3rem;
 }
-
-.row>.col-12 { 
-  padding: 0; 
-}
-.serviceElements { 
-  display: flex; 
-  position: absolute; 
-  top: 60%; 
-  left:50%; 
-  transform: translate(-50%,-50%); 
-  gap: 3rem; 
-  
-}
-.serviceElements figure { 
+.serviceElements figure {
   background-color: var(--ph-c-white-1);
-  width: 23vw; 
+  width: 23vw;
   padding-top: 2rem;
-  padding-left: 4rem; 
-  padding-bottom: 5rem; 
-  padding-right: 4rem;  
-  border-radius:1rem ;
+  padding-left: 4rem;
+  padding-bottom: 5rem;
+  padding-right: 4rem;
+  border-radius: 1rem;
   justify-items: center;
-  
 }
 figure img {
-  width: 100%; 
-  height: 100%; 
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
-figcaption { 
+figcaption {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 1.25rem;
   letter-spacing: 7%;
   text-align: center;
-  
-}.aboutUs { 
-  margin-top: 5rem; 
+}
+.aboutUs {
+  margin-top: 5rem;
 }
 
-.tekstContainer { 
-  padding: 2rem; 
+.tekstContainer {
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem; 
+  gap: 2rem;
 }
 
-aside h3 { 
+aside h3 {
   color: var(--ph-c-primairy-1);
-  size: 3.5rem; 
-  line-height: 3rem; 
+  font-size: 3.5rem;
+  line-height: 3rem;
   width: 80%;
 }
-aside button { 
-  width: 30%; 
+aside button {
+  width: 30%;
 }
 /* Grid container */
-.gridContainer{ 
-  display: grid; 
-  grid-template-columns: repeat(8, 1fr);  
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(24, 1fr);
-  grid-gap: 1rem; 
+  grid-gap: 1rem;
   width: 100%;
   height: 100vh;
   padding: 3.625rem;
-  margin-top: 5rem; 
+  margin-top: 5rem;
   background-color: var(--ph-c-white-1);
-  
-  
 }
 
 /* GRID items */
 /* titel */
-.item.a{ 
-  grid-column-start: 4; 
-  grid-row-start: 1; 
-  grid-column-end: 6; 
-  place-self: center; 
+.item.a {
+  grid-column-start: 4;
+  grid-row-start: 1;
+  grid-column-end: 6;
+  place-self: center;
 }
-.a h3 { 
+.a h3 {
   color: var(--ph-c-primairy-1);
-  size: 3.5rem; 
-  line-height: 3rem; 
-
+  font-size: 3.5rem;
+  line-height: 3rem;
 }
 /* spytraining afbeelding */
 .item.b {
@@ -372,128 +368,123 @@ aside button {
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 9;
-
 }
-.b img { 
+.b img {
   width: 100%;
-  height: 100%; 
+  height: 100%;
   object-fit: cover;
   object-position: 90% 0%;
 }
-.item.c { 
-  grid-column-start: 2; 
-  grid-column-end: 4; 
-  grid-row-start: 9; 
-  grid-row-end: 16; 
+.item.c {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 9;
+  grid-row-end: 16;
 }
-.c img { 
+.c img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 0% 90%;
-  
-   
 }
 /* agent8008 afbeelding */
-.item.d { 
-  grid-column-start: 4; 
-  grid-column-end: 6; 
-  grid-row-start: 2; 
-  grid-row-end: 13; 
+.item.d {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 13;
 }
-.d img { 
+.d img {
   width: 100%;
   height: 100%;
   object-fit: fill;
 }
 
 /* portaal afbeelding  */
-.item.e { 
-  grid-column-start: 4; 
-  grid-column-end: 6; 
-  grid-row-start:13; 
-  grid-row-end: 25; 
+.item.e {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 13;
+  grid-row-end: 25;
 }
-.e img { 
+.e img {
   width: 100%;
   height: 100%;
   object-fit: fill;
 }
 
 /* JBAS afbeelding */
-.item.f { 
-  grid-column-start: 6; 
-  grid-column-end: 8; 
-  grid-row-start:2; 
-  grid-row-end: 14; 
+.item.f {
+  grid-column-start: 6;
+  grid-column-end: 8;
+  grid-row-start: 2;
+  grid-row-end: 14;
   align-self: start;
 }
-.f img { 
+.f img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
 /* AT Infographic afbeelding */
-.item.g { 
-  grid-column-start: 2; 
-  grid-column-end: 3; 
-  grid-row-start:16; 
-  grid-row-end: 25; 
-  
+.item.g {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 16;
+  grid-row-end: 25;
 }
-.g img { 
+.g img {
   width: 100%;
   height: 100%;
   object-fit: fill;
 }
 /* Samgung afbeelding  */
-.item.h { 
-  grid-column-start: 3; 
-  grid-column-end: 4; 
-  grid-row-start: 16; 
-  grid-row-end: 25; 
-  
+.item.h {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 16;
+  grid-row-end: 25;
 }
-.h img { 
+.h img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 /* design elementen */
-.item.i { 
-  background-color: var(--ph-c-primairy-1); 
-  grid-column-start: 6; 
-  grid-column-end: 7; 
-  grid-row-start:16; 
-  grid-row-end: 23; 
+.item.i {
+  background-color: var(--ph-c-primairy-1);
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 16;
+  grid-row-end: 23;
   width: 100%;
   height: 100%;
-  border-radius: 0 50px 0 50px; 
+  border-radius: 0 50px 0 50px;
 }
-.item.j { 
-  background-color: var(--ph-c-secundairy-1); 
-  grid-column-start: 7; 
-  grid-column-end: 8; 
-  grid-row-start:16; 
-  grid-row-end: 23; 
+.item.j {
+  background-color: var(--ph-c-secundairy-1);
+  grid-column-start: 7;
+  grid-column-end: 8;
+  grid-row-start: 16;
+  grid-row-end: 23;
   width: 100%;
   height: 100%;
-  border-radius: 50px 0 50px 0; 
+  border-radius: 50px 0 50px 0;
 }
 
-.item.k { 
-  grid-column-start: 4; 
+.item.k {
+  grid-column-start: 4;
   grid-column-end: 6;
-  grid-row-start: 25; 
-  place-self: center; 
+  grid-row-start: 25;
+  place-self: center;
 }
 
 /* Section Social proof  */
 
-.socialProof { 
-  height: 80vh; 
+.socialProof {
+  height: 80vh;
   background-image: url(./images/DESIGN\ ELEMENT\ OVER\ ONS.png);
   background-repeat: no-repeat;
   background-attachment: local;
@@ -501,67 +492,63 @@ aside button {
   position: relative;
   margin-top: 5rem;
 }
-.socialProof .titelTekst {  
+.socialProof .titelTekst {
   position: absolute;
-  left: 30vw; 
- 
+  left: 30vw;
 }
 
-.socialCard { 
+.socialCard {
   background-color: var(--ph-c-white-1);
   width: 35vw;
-  border-radius: 2.875rem ;
-  padding: 2rem 2rem 2rem 2rem; 
+  border-radius: 2.875rem;
+  padding: 2rem 2rem 2rem 2rem;
   position: relative;
-  left: 40vw; 
-  top: 20vh; 
+  left: 40vw;
+  top: 20vh;
   box-shadow: 0px 6.14px 36.85px 0px #00000040;
-
-  
 }
-.socialCard h4 { 
+.socialCard h4 {
   width: 100%;
-  color: var(--ph-c-secundairy-1); 
-  font-size: 6rem; 
+  color: var(--ph-c-secundairy-1);
+  font-size: 6rem;
   font-family: "Montserrat", sans-serif;
-  text-align: center; 
+  text-align: center;
   font-weight: 700;
 }
-.socialCard cite { 
+.socialCard cite {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
-  font-size: 1.875rem; 
+  font-size: 1.875rem;
   width: 100%;
   text-align: center;
   height: auto;
-  color:var(--ph-c-primairy-1)
+  color: var(--ph-c-primairy-1);
 }
-.naamKlant { 
-  width:100%;
+.naamKlant {
+  width: 100%;
   height: auto;
-  padding-top: 3rem; 
+  padding-top: 3rem;
   display: flex;
   align-items: center;
   position: relative;
-
 }
-.designElementCard { 
+.designElementCard {
   background-color: var(--ph-c-primairy-1);
-  height: 60%; 
+  height: 60%;
   width: 20%;
-  top: 2rem; 
-  left: 0; 
+  top: 2rem;
+  left: 0;
   position: absolute;
   border-radius: 0 1em 0 1rem;
-  z-index: 0; 
+  z-index: 0;
 }
-.naamKlant img { 
+.naamKlant img {
   width: 25%;
   z-index: 1;
-  margin-left: 1rem; 
+  margin-left: 1rem;
 }
-.naamKlant p { 
-  padding: 1rem; 
+.naamKlant p {
+  padding: 1rem;
   font-size: 1.125rem;
   font-weight: 300;
   font-family: "Montserrat", sans-serif;
