@@ -553,3 +553,19 @@ aside button {
   font-weight: 300;
   font-family: "Montserrat", sans-serif;
 }
+footer { 
+  background-image: url(./images/achtergrond-footer-breed.png);
+  object-fit: contain;  
+ width: 100%;
+ height: 40vh; 
+ 
+ 
+}
+
+.logo { 
+  width: 20vw;
+}
+
+.regel { 
+  display: flex;
+}
