@@ -62,7 +62,7 @@
     </header>
     <main>
 
-        <section class="ourService">
+        <section id="ourService">
             <div class="row">
                 <div class="col-12">
                     <h3>Wij zijn gespecialiseerd in</h3>
@@ -85,7 +85,7 @@
 
 
         </section>
-        <section class="aboutUs">
+        <section id="aboutUs">
             <div class="row">
                 <div class="col-6">
                     <div class="container-designElement">
@@ -120,7 +120,7 @@
             </div>
 
         </section>
-        <section class="ourWork gridContainer">
+        <section id="ourWork" class="gridContainer">
             <div class="item a">
                 <h3>Ons Werk</h3>
             </div>
@@ -139,7 +139,7 @@
 
         </section>
         <!--  Deze sectie zou het beste met vue kunnen worden opgemaakt omdat dit interactieve content is -->
-        <section class="socialProof">
+        <section id="socialProof">
             <div class="titelTekst">
                 <h3>Wat partners over Packhouse</h3>
                 <h3>zeggen</h3>
@@ -157,23 +157,48 @@
             </div>
         </section>
 
-        <section class="contactForm"></section>
+        <section id="contactForm"></section>
     </main>
     <footer>
-        <img class="logo" src="styles/images/Beeld-WoordMerk-Horizontaal-PHKleuren.svg" alt="logo Packhouse"> 
-    <div class="contactGegevens">
-        <div class="adress regel"><img src="./styles/images/Home-Adress - Wit.png">
-            <p>Pakhuisstraat 3A, 1621GL Hoorn</p>
+        <img src="./styles/images/achtergrond-Footer.png" class="achtergrondAfbeelding">
+        <div class="contentFooter">
+            <img class="logo" src="styles/images/Beeld-WoordMerk-Ondertitel-Wit.png" alt="logo Packhouse">
+            <ul>
+                <li><img src="./styles/images/Home-Adress - Wit.png">
+                    Pakhuisstraat 3A, 1621GL Hoorn
+                </li>
+                <li><img src="./styles/images/Phone - Wit.png">
+                    +31 (0) 229 729 024
+                </li>
+                <li><img src="./styles/images/Mail - wit.png">
+                    <a href="mailto:info@pack.house">
+                        info@pack.house
+                    </a>
+                </li>
+
+            </ul>
+            <ul>
+                <li><a href="#aboutUs">Over Ons</a></li>
+                <li><a href="">Producten</a></li>
+                <li><a href="#ourService">Service</a></li>
+                <li><a href="#ourWork">Ons werk</a></li>
+
+            </ul>
+
+            <ul class="socials">
+                <li>Volg ons ook op de socials!</li>
+                <li><a href="https://www.facebook.com/PackhouseStudio?locale=nl_NL"><img
+                            src="./styles/images/Facebook.png"></a></li>
+                <li><a href="https://www.linkedin.com/company/packhousestudio/posts/?feedView=all"><img
+                            src="./styles/images/LinkedIn.png"></a></li>
+                <li><a href="https://git.pack.house/"><img src="./styles/images/GitHub.png"></a></li>
+                <li><a href="https://portal.pack.house/#/"><img src="./styles/images/profile.png"></a></li>
+
+
+            </ul>
+
         </div>
-        <div class="phone regel"><img src="./styles/images/Phone - Wit.png">
-            <p>+31 (0) 229 729 024</p>
-        </div>
-        <div class="mail regel"><a href="mailto:info@pack.house"><img src="./styles/images/Mail - wit.png">
-            <p>info@pack.house</p></a>
-        </div>
-        
-        
-    </div></footer>
+    </footer>
 </body>
 
 </html>
