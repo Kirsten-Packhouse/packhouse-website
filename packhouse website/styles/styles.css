@@ -561,7 +561,9 @@ footer {
   display: flex;
   align-items: flex-start;
   gap: 7.5rem;
-  position: absolute
+  position: absolute; 
+  
+
   
 }
 
@@ -600,4 +602,71 @@ footer {
 }
 .socials:last-of-type li:first-of-type { 
   width: 100%;
+  gap: 1rem;
+  
+}
+
+#contactForm { 
+  margin: 50vh 25vh 50vh 25vh; 
+  display: flex;
+  background-image: url(./images/DESIGN\ ELEMENTEN\ FORM.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+ 
+
+}
+form { 
+  background-color: var(--ph-c-white-1); 
+  width: 50vw;
+  padding: 5rem 2.5rem 2.5rem 2.5rem;
+  border-radius: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  align-items: center;
+  flex-wrap: nowrap;
+
+}
+form > h3 { 
+  color: var(--ph-c-primairy-1);
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 600;
+line-height: 3.625rem; 
+width: 80%;;
+}
+
+form > p { 
+  width: 80%;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 2rem;
+  
+}
+
+.contactBlok { 
+  width: 80%;
+  
+}
+.contact { 
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+}
+.contact > p  { 
+font-weight: 600;
+color: var(--ph-c-primairy-1);
+font-size: 1.375rem; 
+line-height: 1.75rem;
+}
+a > p { 
+  font-weight: 600;
+color: var(--ph-c-primairy-1);
+font-size: 1.375rem; 
+line-height: 1.75rem;
+;
+}
+.contact img { 
+  max-width: 50%;
 }
